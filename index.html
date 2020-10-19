@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" 
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Ahmed's To Do List</h1>
+    </header>
+    <div class="select">
+        <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+
+        </select>
+    </div>
+    <form>
+        <input type="text" class="toDoName">
+        <button id="add-to-do"><i class="fas fa-plus-square"></i></button>
+    </form>
+    <div class="to-do-container">
+        <ul class="todo-list"></ul>
+        <audio src="audio/trash.wav"></audio>
+        <audio src="audio/complete.wav" id="msg-com" aria-valuemax="50"></audio>
+    </div>
+    
+</body>
+</html>

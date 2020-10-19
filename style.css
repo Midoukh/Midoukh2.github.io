@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: linear-gradient(120deg, rgb(37, 199, 199), rgb(72, 7, 133));
+    color: white;
+    min-height: 100vh;
+}
+header {
+    font-size: 1.5rem;
+}
+header h1{
+    font-size: 1.5em;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form input, form button {
+    border: none;
+    background-color: white;
+    padding: 0.5em;
+    font-size: 1.1em;
+    outline: none;
+    
+}
+form input{
+    border-top-left-radius: 3pt;
+    border-bottom-left-radius: 3pt;
+    min-width: 50vh;
+}
+form button {
+    color:rgb(72, 7, 133);
+    background-color: white;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 3pt;
+}
+form button:hover{
+    background-color:rgb(72, 7, 133);
+    color: white;
+}
+.to-do-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 25%;
+    list-style: none;
+}
+.todo{
+    margin: 1rem;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 3pt;
+    transition: all 1s ease;
+}
+.todo li{
+    flex: 1;
+}
+.completed-btn, .trash-btn {
+    background-color: rgb(37, 153, 199);
+    padding: 0.6em 0.7em;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.completed-btn {
+    background-color: rgb(36, 173, 77);
+}
+.completed-btn:hover{
+    background-color: rgb(25, 144, 61);
+}
+.trash-btn {
+    background-color: rgb(192, 24, 74);
+}
+.trash-btn:hover{
+    background-color: rgb(124, 11, 45);
+}
+.todo-item {
+    padding: 0 0.5em;
+}
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+.select{
+    position: absolute;
+    left: 65%;
+    margin-top: 6.75vh;
+    margin-left: 1vh;  
+    display: inline-block;  
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    width: 15em;
+    cursor: pointer;
+    padding: 0.74rem;
+    text-align: center;
+    display: inline-block;
+
+}
+@media only screen and (max-width: 600px) {
+    .select {
+        position: relative;
+        margin-top: 3vh;
+        left: 30%;
+    }
+}
+
+.select::after{
+
+    content: "\25BC";
+    position: absolute;
+    background-color: rgb(72, 7, 133);
+    top: 0;
+    right: 0;
+    padding: 0.55em 1rem;
+    pointer-events: none;
+    transition: all ease 0.5s;
+}
+.select:hover::after{
+    background-color: white;
+    color: rgb(72, 7, 133);
+}
